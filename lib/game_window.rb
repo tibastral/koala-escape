@@ -53,8 +53,10 @@ class GameWindow < Hasu::Window
     @high_score = 0
     @enemies = []
     @speed = 3
-    @music.stop
-    @music.play
+    if @music
+      @music.stop
+      @music.play
+    end
     reinit
   end
 
